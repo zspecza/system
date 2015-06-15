@@ -1,3 +1,9 @@
+[![Build Status](https://travis-ci.org/declandewet/system.svg?branch=master)](https://travis-ci.org/declandewet/system)
+[![NPM version](https://badge.fury.io/js/postcss-system.svg)](http://badge.fury.io/js/postcss-system)
+[![Dependency Status](https://david-dm.org/declandewet/system.svg)](https://david-dm.org/declandewet/system)
+[![devDependency Status](https://david-dm.org/declandewet/system/dev-status.svg)](https://david-dm.org/declandewet/system#info=devDependencies)
+[![Coverage Status](https://coveralls.io/repos/declandewet/system/badge.png?branch=master)](https://coveralls.io/r/declandewet/system)
+
 system
 =========
 
