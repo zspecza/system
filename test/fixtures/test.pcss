@@ -1,0 +1,34 @@
+component(tweet, box) {
+  border: 1px solid grey;
+  background: purple;
+  is(hovered, active) {
+    transform: rotateX(45deg);
+  }
+  when(featured, prominent) {
+    border-color: yellow;
+    has(avatar, profile-pic) {
+      transform: scale(1.1);
+    }
+  }
+  has(avatar, profile-pic) {
+    border-radius: 50%;
+    when(square, box) {
+      border-radius: 0;
+    }
+  }
+  has(name, id) {
+    font-weight: bold;
+  }
+  has(message, content) {
+    color: #222;
+  }
+  inside(testimonial, vouch) {
+    background: white;
+  }
+}
+util(mt-10, mt-ten) {
+  margin-top: 10px;
+}
+container(testimonial, vouch) {
+  background: purple;
+}

@@ -1,0 +1,12 @@
+.something {
+  color: blue;
+}
+.something--part {
+  color: purple;
+}
+.something--part--nested-part {
+  color: orange;
+}
+.something--part--nested-part--item {
+  color: yellow;
+}

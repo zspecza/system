@@ -1,0 +1,38 @@
+{
+  "name": "postcss-system",
+  "version": "0.0.0",
+  "description": "Author your CSS with a BEM-compliant component-oriented system.",
+  "author": "Declan de Wet <declandewet@me.com>",
+  "directories": {
+    "lib": "lib"
+  },
+  "main": "lib",
+  "scripts": {
+    "test":
+      "./node_modules/.bin/istanbul test ./node_modules/.bin/_mocha -- -R spec",
+    "coveralls": "npm test --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/declandewet/system-css"
+  },
+  "bugs": {
+    "url": "http://github.com/declandewet/system-css/issues",
+    "email": "declandewet@me.com"
+  },
+  "dependencies": {
+    "lodash": "3.9.x",
+    "postcss": "^4.1.11",
+    "when": "^3.7.3"
+  },
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "istanbul": "^0.3.15",
+    "mocha": "^2.2.5",
+    "postcss-nested": "^0.3.2"
+  },
+  "engine": {
+    "node": ">=0.10.0"
+  },
+  "license": "MIT"
+}

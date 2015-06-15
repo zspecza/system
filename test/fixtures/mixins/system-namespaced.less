@@ -1,0 +1,28 @@
+.namespace-component(@names, @content) {
+  @selector: component(~'@{names}');
+  @{selector} { @content(); }
+}
+.namespace-has(@names, @content) {
+  @selector: has(~'@{names}');
+  @{selector} { @content(); }
+}
+.namespace-when(@names, @content) {
+  @selector: when(~'@{names}');
+  @{selector} { @content(); }
+}
+.namespace-is(@names, @content) {
+  @selector: is(~'@{names}');
+  @{selector} { @content(); }
+}
+.namespace-inside(@names, @content) {
+  @selector: inside(~'@{names}');
+  @{selector} { @content(); }
+}
+.namespace-util(@names, @content) {
+  @selector: util(~'@{names}');
+  @{selector} { @content(); }
+}
+.namespace-container(@names, @content) {
+  @selector: container(~'@{names}');
+  @{selector} { @content(); }
+}

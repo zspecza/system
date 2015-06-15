@@ -1,0 +1,24 @@
+=namespace-system-block($mixin, $name)
+  #{$mixin + '(' + $name + ')'}
+    @content
+=namespace-component($names...)
+  +namespace-system-block(component, $names)
+    @content
+=namespace-has($names...)
+  +namespace-system-block(has, $names)
+    @content
+=namespace-when($names...)
+  +namespace-system-block(when, $names)
+    @content
+=namespace-is($names...)
+  +namespace-system-block(is, $names)
+    @content
+=namespace-inside($names...)
+  +namespace-system-block(inside, $names)
+    @content
+=namespace-util($names...)
+  +namespace-system-block(util, $names)
+    @content
+=namespace-container($names...)
+  +namespace-system-block(container, $names)
+    @content

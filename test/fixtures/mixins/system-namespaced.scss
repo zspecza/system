@@ -1,0 +1,24 @@
+@mixin namespace-system-block($mixin, $name) {
+  #{$mixin + '(' + $name + ')'} { @content; }
+}
+@mixin namespace-component($names...) {
+  @include namespace-system-block(component, $names) { @content; }
+}
+@mixin namespace-has($names...) {
+  @include namespace-system-block(has, $names) { @content; }
+}
+@mixin namespace-when($names...) {
+  @include namespace-system-block(when, $names) { @content; }
+}
+@mixin namespace-is($names...) {
+  @include namespace-system-block(is, $names) { @content; }
+}
+@mixin namespace-inside($names...) {
+  @include namespace-system-block(inside, $names) { @content; }
+}
+@mixin namespace-util($names...) {
+  @include namespace-system-block(util, $names) { @content; }
+}
+@mixin namespace-container($names...) {
+  @include namespace-system-block(container, $names) { @content; }
+}

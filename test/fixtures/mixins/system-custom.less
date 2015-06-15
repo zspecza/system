@@ -1,0 +1,28 @@
+.new(@names, @content) {
+  @selector: new(~'@{names}');
+  @{selector} { @content(); }
+}
+.part(@names, @content) {
+  @selector: part(~'@{names}');
+  @{selector} { @content(); }
+}
+.option(@names, @content) {
+  @selector: option(~'@{names}');
+  @{selector} { @content(); }
+}
+.state(@names, @content) {
+  @selector: state(~'@{names}');
+  @{selector} { @content(); }
+}
+.area(@names, @content) {
+  @selector: area(~'@{names}');
+  @{selector} { @content(); }
+}
+.tweak(@names, @content) {
+  @selector: tweak(~'@{names}');
+  @{selector} { @content(); }
+}
+.container(@names, @content) {
+  @selector: container(~'@{names}');
+  @{selector} { @content(); }
+}

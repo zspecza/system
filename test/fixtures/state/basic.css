@@ -1,0 +1,12 @@
+.something {
+  color: white;
+}
+.something:active {
+  color: yellow;
+}
+.something--part {
+  color: blue;
+}
+.something--part:hover {
+  color: green;
+}

@@ -1,0 +1,28 @@
+.component(@names, @content) {
+  @selector: component(~'@{names}');
+  @{selector} { @content(); }
+}
+.has(@names, @content) {
+  @selector: has(~'@{names}');
+  @{selector} { @content(); }
+}
+.when(@names, @content) {
+  @selector: when(~'@{names}');
+  @{selector} { @content(); }
+}
+.is(@names, @content) {
+  @selector: is(~'@{names}');
+  @{selector} { @content(); }
+}
+.inside(@names, @content) {
+  @selector: inside(~'@{names}');
+  @{selector} { @content(); }
+}
+.util(@names, @content) {
+  @selector: util(~'@{names}');
+  @{selector} { @content(); }
+}
+.container(@names, @content) {
+  @selector: container(~'@{names}');
+  @{selector} { @content(); }
+}

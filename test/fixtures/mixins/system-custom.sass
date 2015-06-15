@@ -1,0 +1,24 @@
+=system-block($mixin, $name)
+  #{$mixin + '(' + $name + ')'}
+    @content
+=new($names...)
+  +system-block(new, $names)
+    @content
+=part($names...)
+  +system-block(part, $names)
+    @content
+=option($names...)
+  +system-block(option, $names)
+    @content
+=state($names...)
+  +system-block(state, $names)
+    @content
+=area($names...)
+  +system-block(area, $names)
+    @content
+=tweak($names...)
+  +system-block(tweak, $names)
+    @content
+=container($names...)
+  +system-block(container, $names)
+    @content

@@ -1,0 +1,12 @@
+.something {
+  color: white;
+}
+.something.\+featured {
+  color: blue;
+}
+.something--part {
+  color: green;
+}
+.something--part.\+prominent {
+  color: red;
+}

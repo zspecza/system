@@ -1,0 +1,24 @@
+@mixin system-block($mixin, $name) {
+  #{$mixin + '(' + $name + ')'} { @content; }
+}
+@mixin component($names...) {
+  @include system-block(component, $names) { @content; }
+}
+@mixin has($names...) {
+  @include system-block(has, $names) { @content; }
+}
+@mixin when($names...) {
+  @include system-block(when, $names) { @content; }
+}
+@mixin is($names...) {
+  @include system-block(is, $names) { @content; }
+}
+@mixin inside($names...) {
+  @include system-block(inside, $names) { @content; }
+}
+@mixin util($names...) {
+  @include system-block(util, $names) { @content; }
+}
+@mixin container($names...) {
+  @include system-block(container, $names) { @content; }
+}

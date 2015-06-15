@@ -1,0 +1,24 @@
+=system-block($mixin, $name)
+  #{$mixin + '(' + $name + ')'}
+    @content
+=component($names...)
+  +system-block(component, $names)
+    @content
+=has($names...)
+  +system-block(has, $names)
+    @content
+=when($names...)
+  +system-block(when, $names)
+    @content
+=is($names...)
+  +system-block(is, $names)
+    @content
+=inside($names...)
+  +system-block(inside, $names)
+    @content
+=util($names...)
+  +system-block(util, $names)
+    @content
+=container($names...)
+  +system-block(container, $names)
+    @content

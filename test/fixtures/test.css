@@ -1,0 +1,69 @@
+.tweet,
+.box {
+  border: 1px solid grey;
+  background: purple;
+}
+.tweet:hover,
+.tweet:active,
+.box:hover,
+.box:active {
+  transform: rotateX(45deg);
+}
+.tweet.\+featured,
+.tweet.\+prominent,
+.box.\+featured,
+.box.\+prominent {
+  border-color: yellow;
+}
+.tweet.\+featured .tweet--avatar,
+.tweet.\+featured .tweet--profile-pic,
+.tweet.\+prominent .tweet--avatar,
+.tweet.\+prominent .tweet--profile-pic,
+.box.\+featured .box--avatar,
+.box.\+featured .box--profile-pic,
+.box.\+prominent .box--avatar,
+.box.\+prominent .box--profile-pic {
+  transform: scale(1.1);
+}
+.tweet--avatar,
+.tweet--profile-pic,
+.box--avatar,
+.box--profile-pic {
+  border-radius: 50%;
+}
+.tweet--avatar.\+square,
+.tweet--avatar.\+box,
+.tweet--profile-pic.\+square,
+.tweet--profile-pic.\+box,
+.box--avatar.\+square,
+.box--avatar.\+box,
+.box--profile-pic.\+square,
+.box--profile-pic.\+box {
+  border-radius: 0;
+}
+.tweet--name,
+.tweet--id,
+.box--name,
+.box--id {
+  font-weight: bold;
+}
+.tweet--message,
+.tweet--content,
+.box--message,
+.box--content {
+  color: #222;
+}
+#system .\@testimonial .tweet,
+#system .\@vouch .tweet,
+#system .\@testimonial .box,
+#system .\@vouch .box {
+  background: white;
+}
+#system .\~mt-10,
+#system .\~mt-ten {
+  margin-top: 10px;
+}
+.\@testimonial,
+.\@vouch {
+  background: purple;
+}

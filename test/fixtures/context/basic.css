@@ -1,0 +1,6 @@
+.something {
+  color: blue;
+}
+#system .\@area .something {
+  color: red;
+}

@@ -1,0 +1,24 @@
+@mixin system-block($mixin, $name) {
+  #{$mixin + '(' + $name + ')'} { @content; }
+}
+@mixin new($names...) {
+  @include system-block(new, $names) { @content; }
+}
+@mixin part($names...) {
+  @include system-block(part, $names) { @content; }
+}
+@mixin option($names...) {
+  @include system-block(option, $names) { @content; }
+}
+@mixin state($names...) {
+  @include system-block(state, $names) { @content; }
+}
+@mixin area($names...) {
+  @include system-block(area, $names) { @content; }
+}
+@mixin tweak($names...) {
+  @include system-block(tweak, $names) { @content; }
+}
+@mixin container($names...) {
+  @include system-block(container, $names) { @content; }
+}

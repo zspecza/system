@@ -1,0 +1,12 @@
+.something {
+  color: blue;
+}
+.something.\+featured {
+  color: yellow;
+}
+.something.\+featured .something--part {
+  color: red;
+}
+.something.\+featured .something--part--nested {
+  color: green;
+}
