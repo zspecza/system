@@ -1,14 +1,18 @@
-var path = require('path');
-var _ = require('lodash');
+var path    = require('path');
+var _       = require('lodash');
 var postcss = require('postcss');
-var expect = require('chai').expect;
-var node = require('when/node');
-var fs = require('fs');
-var plugin = require('../lib');
-var nested = require('postcss-nested');
+var chai    = require('chai');
+var node    = require('when/node');
+var fs      = require('fs');
+var plugin  = require('../lib');
+var nested  = require('postcss-nested');
+var promise = require('chai-as-promised');
+var expect  = chai.expect;
+
+chai.use(promise);
 
 var FIXTURES_PATH = path.join(__dirname, 'fixtures');
-var MIXIN_PATH = path.join(FIXTURES_PATH, 'mixins');
+var MIXIN_PATH    = path.join(FIXTURES_PATH, 'mixins');
 
 function match_files(file1, file2) {
   var inp = fs.readFileSync(file1, { encoding: 'utf-8' });
@@ -50,6 +54,30 @@ var defaultSettings = {
 describe('SystemCSS', function() {
 
   describe('preprocessor supplementation', function() {
+
+    it('should throw when calling without the right options', function() {
+      expect(plugin.mixins.bind(plugin, {
+        preprocessor: {
+          engine: null
+        }
+      })).to.throw('Please specify the name of the CSS preprocessor you wish to receive mixins for.');
+      expect(plugin.mixins.bind(plugin, {
+        preprocessor: {
+          engine: 'stylus'
+        }
+      })).to.throw('Pleace specify a directory path. SystemCSS cannot write your mixins to a directory it does not know.');
+    });
+
+    it('should be rejected if an error occurs', function() {
+      expect(plugin.mixins({
+        preprocessor: {
+          engine: 'fake-engine',
+          output: 'fake-output'
+        }
+      }).then(function() {
+        throw new Error('Some fake error...');
+      })).to.be.rejected;
+    });
 
     _.each(['sass', 'scss', 'less', 'stylus'], function(preprocessor) {
 
@@ -111,6 +139,10 @@ describe('SystemCSS', function() {
   });
 
   describe('PostCSS', function() {
+
+    it('supports calling with no options param', function(done) {
+      test('.test {}', '.test {}', null, done);
+    });
 
     describe('all', function() {
 
