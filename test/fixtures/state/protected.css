@@ -1,0 +1,6 @@
+.tweet {
+  color: blue;
+}
+.tweet:enabled {
+  color: yellow;
+}

@@ -114,7 +114,11 @@ describe('SystemCSS', function() {
 
     describe('all', function() {
 
-      it('supports multiple arguments', match_expected.bind(null, 'test', {}));
+      it('supports multiple arguments', match_expected.bind(null, 'multiple-args', {}));
+
+      it('supports pseudo-selectors', match_expected.bind(null, 'pseudo-selectors', {}));
+
+      it('does not transform regular CSS selectors', match_expected.bind(null, 'css-selectors', {}));
 
     });
 
@@ -143,6 +147,8 @@ describe('SystemCSS', function() {
     describe('state', function() {
 
       it('compiles to the correct output', match_expected.bind(null, 'state/basic', {}));
+
+      it('does not transform protected states', match_expected.bind(null, 'state/protected', {}));
 
     });
 
