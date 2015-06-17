@@ -1,0 +1,12 @@
+.something {
+  color: blue;
+}
+.something:hover {
+  color: yellow;
+}
+.something:hover .something--part {
+  color: red;
+}
+.something:hover .something--part--nested {
+  color: green;
+}
