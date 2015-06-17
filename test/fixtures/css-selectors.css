@@ -1,3 +1,6 @@
 .regular-selector {
   color: yellow;
 }
+.with, .commas {
+  color: blue;
+}

@@ -136,6 +136,8 @@ describe('SystemCSS', function() {
 
       it('supports elements in modifiers', match_expected.bind(null, 'element/modified-parent', {}));
 
+      it('supports elements with a parent that has state', match_expected.bind(null, 'element/parent-with-state', {}));
+
     });
 
     describe('modifier', function() {
