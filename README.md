@@ -7,6 +7,8 @@
 system
 =========
 
+[![Join the chat at https://gitter.im/declandewet/system](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/declandewet/system?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 > **please note**, this module is in its early development phase and will likely change frequently.
 
 `system` is a [PostCSS](//github.com/postcss/postcss) plugin developed at [io](http://io.co.za) that allows you to augment your CSS with a syntax that aids in creating BEM-compliant front-end components and reads like a class definition.
