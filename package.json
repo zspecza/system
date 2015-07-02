@@ -1,6 +1,6 @@
 {
   "name": "postcss-system",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Author your CSS with a BEM-compliant component-oriented system.",
   "author": "Declan de Wet <declandewet@me.com>",
   "directories": {
@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "lodash": "3.9.x",
-    "postcss": "^4.1.11",
+    "postcss": "^4.1.13",
     "when": "^3.7.3"
   },
   "devDependencies": {
