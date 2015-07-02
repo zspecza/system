@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "lodash": "3.9.x",
-    "postcss": "^4.1.11",
+    "postcss": "^4.1.13",
     "when": "^3.7.3"
   },
   "devDependencies": {
