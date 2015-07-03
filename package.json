@@ -20,9 +20,9 @@
     "email": "declandewet@me.com"
   },
   "dependencies": {
-    "lodash": "3.9.x",
-    "postcss": "^4.1.13",
-    "when": "^3.7.3"
+    "lodash": "3.10.x",
+    "postcss": "4.1.x",
+    "when": "3.7.x"
   },
   "devDependencies": {
     "chai": "^3.0.0",
