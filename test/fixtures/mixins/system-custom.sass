@@ -1,24 +1,42 @@
-=system-block($mixin, $name)
-  #{$mixin + '(' + $name + ')'}
-    @content
 =new($names...)
-  +system-block(new, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'new(' + $all + ')'}
     @content
 =part($names...)
-  +system-block(part, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'part(' + $all + ')'}
     @content
 =option($names...)
-  +system-block(option, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'option(' + $all + ')'}
     @content
 =state($names...)
-  +system-block(state, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'state(' + $all + ')'}
     @content
 =area($names...)
-  +system-block(area, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'area(' + $all + ')'}
     @content
 =tweak($names...)
-  +system-block(tweak, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'tweak(' + $all + ')'}
     @content
 =container($names...)
-  +system-block(container, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'container(' + $all + ')'}
     @content
