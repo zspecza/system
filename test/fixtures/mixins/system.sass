@@ -1,24 +1,42 @@
-=system-block($mixin, $name)
-  #{$mixin + '(' + $name + ')'}
-    @content
 =component($names...)
-  +system-block(component, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'component(' + $all + ')'}
     @content
 =has($names...)
-  +system-block(has, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'has(' + $all + ')'}
     @content
 =when($names...)
-  +system-block(when, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'when(' + $all + ')'}
     @content
 =is($names...)
-  +system-block(is, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'is(' + $all + ')'}
     @content
 =inside($names...)
-  +system-block(inside, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'inside(' + $all + ')'}
     @content
 =util($names...)
-  +system-block(util, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'util(' + $all + ')'}
     @content
 =container($names...)
-  +system-block(container, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'container(' + $all + ')'}
     @content

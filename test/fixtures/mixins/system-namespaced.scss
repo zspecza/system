@@ -1,24 +1,35 @@
-@mixin namespace-system-block($mixin, $name) {
-  #{$mixin + '(' + $name + ')'} { @content; }
-}
 @mixin namespace-component($names...) {
-  @include namespace-system-block(component, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'namespace-component(' + $all + ')'} { @content; }
 }
 @mixin namespace-has($names...) {
-  @include namespace-system-block(has, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'namespace-has(' + $all + ')'} { @content; }
 }
 @mixin namespace-when($names...) {
-  @include namespace-system-block(when, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'namespace-when(' + $all + ')'} { @content; }
 }
 @mixin namespace-is($names...) {
-  @include namespace-system-block(is, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'namespace-is(' + $all + ')'} { @content; }
 }
 @mixin namespace-inside($names...) {
-  @include namespace-system-block(inside, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'namespace-inside(' + $all + ')'} { @content; }
 }
 @mixin namespace-util($names...) {
-  @include namespace-system-block(util, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'namespace-util(' + $all + ')'} { @content; }
 }
 @mixin namespace-container($names...) {
-  @include namespace-system-block(container, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'namespace-container(' + $all + ')'} { @content; }
 }

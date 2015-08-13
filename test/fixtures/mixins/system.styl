@@ -1,21 +1,35 @@
 component()
-  {'component(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'component(' + join('\, ', s) + ')'}
     {block}
 has()
-  {'has(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'has(' + join('\, ', s) + ')'}
     {block}
 when()
-  {'when(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'when(' + join('\, ', s) + ')'}
     {block}
 is()
-  {'is(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'is(' + join('\, ', s) + ')'}
     {block}
 inside()
-  {'inside(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'inside(' + join('\, ', s) + ')'}
     {block}
 util()
-  {'util(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'util(' + join('\, ', s) + ')'}
     {block}
 container()
-  {'container(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'container(' + join('\, ', s) + ')'}
     {block}

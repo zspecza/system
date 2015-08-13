@@ -1,24 +1,35 @@
-@mixin system-block($mixin, $name) {
-  #{$mixin + '(' + $name + ')'} { @content; }
-}
 @mixin new($names...) {
-  @include system-block(new, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'new(' + $all + ')'} { @content; }
 }
 @mixin part($names...) {
-  @include system-block(part, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'part(' + $all + ')'} { @content; }
 }
 @mixin option($names...) {
-  @include system-block(option, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'option(' + $all + ')'} { @content; }
 }
 @mixin state($names...) {
-  @include system-block(state, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'state(' + $all + ')'} { @content; }
 }
 @mixin area($names...) {
-  @include system-block(area, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'area(' + $all + ')'} { @content; }
 }
 @mixin tweak($names...) {
-  @include system-block(tweak, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'tweak(' + $all + ')'} { @content; }
 }
 @mixin container($names...) {
-  @include system-block(container, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'container(' + $all + ')'} { @content; }
 }

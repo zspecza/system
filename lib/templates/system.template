@@ -1,27 +1,24 @@
-<% if (preprocessor.engine === 'scss') { %>
-@mixin <%= preprocessor.namespace %>system-block($mixin, $name) {
-  #{$mixin + '(' + $name + ')'} { @content; }
-}
-<% } %>
-<% if (preprocessor.engine === 'sass') { %>
-=<%= preprocessor.namespace %>system-block($mixin, $name)
-  #{$mixin + '(' + $name + ')'}
-    @content
-<% } %>
 <% _.each(mixins, function(name, mixin) { %>
 <% if (preprocessor.engine === 'scss') { %>
 @mixin <%= preprocessor.namespace + name %>($names...) {
-  @include <%= preprocessor.namespace %>system-block(<%= name %>, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'<%= preprocessor.namespace + name %>(' + $all + ')'} { @content; }
 }
 <% } %>
 <% if (preprocessor.engine === 'sass') { %>
 =<%= preprocessor.namespace + name %>($names...)
-  +<%= preprocessor.namespace %>system-block(<%= name %>, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'<%= preprocessor.namespace + name %>(' + $all + ')'}
     @content
 <% } %>
 <% if (preprocessor.engine === 'stylus') { %>
 <%= preprocessor.namespace + name %>()
-  {'<%= name %>(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'<%= name %>(' + join('\, ', s) + ')'}
     {block}
 <% } %>
 <% if (preprocessor.engine === 'less') { %>

@@ -1,24 +1,35 @@
-@mixin system-block($mixin, $name) {
-  #{$mixin + '(' + $name + ')'} { @content; }
-}
 @mixin component($names...) {
-  @include system-block(component, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'component(' + $all + ')'} { @content; }
 }
 @mixin has($names...) {
-  @include system-block(has, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'has(' + $all + ')'} { @content; }
 }
 @mixin when($names...) {
-  @include system-block(when, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'when(' + $all + ')'} { @content; }
 }
 @mixin is($names...) {
-  @include system-block(is, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'is(' + $all + ')'} { @content; }
 }
 @mixin inside($names...) {
-  @include system-block(inside, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'inside(' + $all + ')'} { @content; }
 }
 @mixin util($names...) {
-  @include system-block(util, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'util(' + $all + ')'} { @content; }
 }
 @mixin container($names...) {
-  @include system-block(container, $names) { @content; }
+  $all: ();
+  @each $name in $names {$all: append($all, unquote($name), comma)}
+  #{'container(' + $all + ')'} { @content; }
 }

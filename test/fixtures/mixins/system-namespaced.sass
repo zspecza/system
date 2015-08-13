@@ -1,24 +1,42 @@
-=namespace-system-block($mixin, $name)
-  #{$mixin + '(' + $name + ')'}
-    @content
 =namespace-component($names...)
-  +namespace-system-block(component, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'namespace-component(' + $all + ')'}
     @content
 =namespace-has($names...)
-  +namespace-system-block(has, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'namespace-has(' + $all + ')'}
     @content
 =namespace-when($names...)
-  +namespace-system-block(when, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'namespace-when(' + $all + ')'}
     @content
 =namespace-is($names...)
-  +namespace-system-block(is, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'namespace-is(' + $all + ')'}
     @content
 =namespace-inside($names...)
-  +namespace-system-block(inside, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'namespace-inside(' + $all + ')'}
     @content
 =namespace-util($names...)
-  +namespace-system-block(util, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'namespace-util(' + $all + ')'}
     @content
 =namespace-container($names...)
-  +namespace-system-block(container, $names)
+  $all: ()
+  @each $name in $names
+    $all: append($all, unquote($name), comma)
+  #{'namespace-container(' + $all + ')'}
     @content

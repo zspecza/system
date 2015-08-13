@@ -1,21 +1,35 @@
 namespace-component()
-  {'component(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'component(' + join('\, ', s) + ')'}
     {block}
 namespace-has()
-  {'has(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'has(' + join('\, ', s) + ')'}
     {block}
 namespace-when()
-  {'when(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'when(' + join('\, ', s) + ')'}
     {block}
 namespace-is()
-  {'is(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'is(' + join('\, ', s) + ')'}
     {block}
 namespace-inside()
-  {'inside(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'inside(' + join('\, ', s) + ')'}
     {block}
 namespace-util()
-  {'util(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'util(' + join('\, ', s) + ')'}
     {block}
 namespace-container()
-  {'container(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'container(' + join('\, ', s) + ')'}
     {block}

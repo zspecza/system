@@ -1,21 +1,35 @@
 new()
-  {'new(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'new(' + join('\, ', s) + ')'}
     {block}
 part()
-  {'part(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'part(' + join('\, ', s) + ')'}
     {block}
 option()
-  {'option(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'option(' + join('\, ', s) + ')'}
     {block}
 state()
-  {'state(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'state(' + join('\, ', s) + ')'}
     {block}
 area()
-  {'area(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'area(' + join('\, ', s) + ')'}
     {block}
 tweak()
-  {'tweak(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'tweak(' + join('\, ', s) + ')'}
     {block}
 container()
-  {'container(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'container(' + join('\, ', s) + ')'}
     {block}
