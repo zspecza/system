@@ -15,8 +15,8 @@ var FIXTURES_PATH = path.join(__dirname, 'fixtures');
 var MIXIN_PATH    = path.join(FIXTURES_PATH, 'mixins');
 
 function match_files(file1, file2) {
-  var inp = fs.readFileSync(file1, { encoding: 'utf-8' });
-  var out = fs.readFileSync(file2, { encoding: 'utf-8' });
+  var inp = fs.readFileSync(file1, { encoding: 'utf-8' }).trim();
+  var out = fs.readFileSync(file2, { encoding: 'utf-8' }).trim();
   expect(inp).to.equal(out);
 }
 

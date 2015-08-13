@@ -21,7 +21,9 @@
 <% } %>
 <% if (preprocessor.engine === 'stylus') { %>
 <%= preprocessor.namespace + name %>()
-  {'<%= name %>(' + join('\, ', arguments) + ')'}
+  s = ()
+  push(s, \' + arg + \') for arg in arguments
+  {'<%= name %>(' + join('\, ', s) + ')'}
     {block}
 <% } %>
 <% if (preprocessor.engine === 'less') { %>
