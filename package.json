@@ -1,6 +1,6 @@
 {
   "name": "postcss-system",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Author your CSS with a BEM-compliant component-oriented system.",
   "author": "Declan de Wet <declandewet@me.com>",
   "directories": {
