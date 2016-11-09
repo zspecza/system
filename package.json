@@ -20,18 +20,18 @@
     "email": "declandewet@me.com"
   },
   "dependencies": {
-    "lodash": "3.10.x",
-    "postcss": "4.1.x",
+    "lodash": "~4.16.6",
+    "postcss": "~5.2.5",
     "when": "3.7.x"
   },
   "devDependencies": {
     "chai": "^3.0.0",
-    "chai-as-promised": "^5.1.0",
+    "chai-as-promised": "^6.0.0",
     "coveralls": "^2.11.2",
-    "istanbul": "^0.3.15",
-    "mocha": "^2.2.5",
-    "mocha-lcov-reporter": "0.0.2",
-    "postcss-nested": "^0.3.2"
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.2",
+    "mocha-lcov-reporter": "1.2.0",
+    "postcss-nested": "^1.0.0"
   },
   "engine": {
     "node": ">=0.10.0"
